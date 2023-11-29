@@ -399,25 +399,23 @@ ul.nav li.active a:before {
 	line-height: 27px;
 }
 
+
 .home-carousel-left,
 .home-carousel-right {
-	background-color: #022b52;
-	color: #fff;
-	font-size: 32px;
-	height: 40px;
-	line-height: 40px;
-	margin-top: -20px;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	width: 32px;
-	z-index: 999;
-	-webkit-transition: 300ms;
-	-moz-transition: 300ms;
-	-o-transition: 300ms;
-	-ms-transition: 300ms;
-	transition: 300ms;
+    background-color: rgba(236, 241, 242, 0.315); /* Cambia el último valor para ajustar la transparencia */
+    color: #fff;
+    font-size: 32px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 32px;
+    z-index: 999;
+    transition: 300ms; /* Puedes simplificar las propiedades de transición */
 }
+
 
 .home-carousel-left {
 	left: -32px;
@@ -682,7 +680,7 @@ ul.nav li.active a:before {
 }
 
 #features .nav-tabs>li.active>a i.fa {
-	color: #4631e7;
+	color: #e73146;
 }
 
 #features .nav-tabs>li>a:hover {
@@ -1325,7 +1323,7 @@ textarea.form-control {
 }
 
 #footer-down ul li.facebook i.fa:hover {
-	color: #3b5998;
+	color: #983b4a;
 	border: 2px solid #3b5998;
 }
 
