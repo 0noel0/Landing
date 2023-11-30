@@ -197,95 +197,67 @@ top:10px;
 }
 }
 @media all and (min-width: 299px) and (max-width: 479px) {
-#slider-video {
-    position: relative;
-	}
-	.slider-wrap{
-position:relative;
+    /* Otros estilos existentes... */
+  
+    /* Ocultar la navegación normal y mostrar el botón de hamburguesa */
+    #menu .nav {
+      display: none;
+    }
+  
+    .navbar-default .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-collapse {
+      display: none;
+      background: #022b52; /* Fondo del menú desplegable */
+    }
+  
+    /* Estilos para el icono de hamburguesa */
+    .navbar-toggle {
+      border: 1px solid #999;
+      background: #022b52;
+      color: #fff;
+    }
+  
+    .navbar-toggle .icon-bar {
+      background: #fff;
+    }
+  
+    /* Estilos para el menú desplegable */
+    .navbar-collapse ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 20px; /* Ajusta según sea necesario */
+    }
+  
+    .navbar-collapse li {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px; /* Ajusta según sea necesario */
+    }
+  
+    .navbar-collapse a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0; /* Ajusta según sea necesario */
+    }
+  
+    /* Iconos para cada elemento del menú */
+    .navbar-collapse .icon-home:before {
+      content: "\f015"; /* Icono de casa de Font Awesome */
+    }
+  
+    .navbar-collapse .icon-services:before {
+      content: "\f013"; /* Icono de servicios de Font Awesome */
+    }
+  
+    /* Agrega más clases de iconos según sea necesario */
+  
+    /* Mostrar el menú desplegable cuando el botón de hamburguesa se hace clic */
+    .navbar-toggle:hover .navbar-collapse {
+      display: block;
+    }
 }
-.carousel-caption h2{
-font-size:45px;
-}
-.carousel-caption p {
-    font-size: 15px;
-    line-height: 25px;
-	}
-	.ab-sec-img img{
-width:100%;
-}
-a.btn-down {
-    top: 65px;
-	}
-#menu .nav {
- left:0%;
- float:left;
-}
-.navbar-default .navbar-toggle {
-border:1px solid #999;
-}
-.navbar-default .navbar-toggle .icon-bar {
-background:#999;
-}
-.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar {
-background:#FFFFFF;
- transition:all 0.5s;
- -moz-transition: all 0.5s;
- -o-transition: all 0.5s;
- -webkit-transition: all 0.5s;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-background:#022b52;
- transition:all 0.5s;
- -moz-transition: all 0.5s;
- -o-transition: all 0.5s;
- -webkit-transition: all 0.5s;
-}
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
- border:rgba(248, 248, 248, 0);
- box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
-}
-ul.navbar-nav {
-float:left;
-overflow:hidden;
-}
-ul.navbar-nav {
- position: relative;
- top:0;
-}
-.navbar-nav > li > a {
-    line-height: 17px;
-	}
-.navbar-collapse.in{
-overflow:hidden;
-}
-.tab-img {
-    top: 0;
-	}
-	.team-main-sec{
-margin-top:30px;
-}
-.slider-content h1 {
-    font-size: 36px;
-    line-height: 55px;
-}
-.slider-content h2 {
-    font-size: 21px;
-    padding: 10px 0px 10px 0px;
-}
-.blog-sec {
-margin-top:30px;
-}
-.mobilenav li {
-    padding: 6px;
-	}
-.slide-sec-1 {
-    text-align: right;
-}
-.slide-sec-2 {
-    text-align: left;
-    padding: 0;
-}
-#footer-down ul li {
-    margin-right: 10px;
-}
-}
+  
