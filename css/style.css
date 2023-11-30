@@ -293,6 +293,18 @@ a.navbar-brand img {
 	top: 9px;
 }
 
+.css-container{
+	margin-left: 2%;
+}
+.show{
+
+}
+.text-visibility{
+	color:white;
+}
+.text-visibility:hover{
+	color:rgb(7, 12, 111);
+}
 #menu {
 	position: absolute;
 }

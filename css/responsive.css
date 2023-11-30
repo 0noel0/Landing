@@ -255,26 +255,56 @@
     }
 }
 
-@media all and (min-width: 299px) and (max-width: 479px) {
+@media all and (min-width: 100px) and (max-width: 768px) {
+
     /* Otros estilos existentes... */
-    .navbar-collapse .navbar-brand img {
-        width: 5px; /* Ajusta el nuevo tamaño de la imagen según tus necesidades */
+    a.navbar-brand img {
+        position: relative;
+        top: 9px;
+        visibility: hidden;
     }
+
     .on {
-        background: rgba(1, 75, 144, 0.008); /* Ajusta el valor alpha para controlar la transparencia */
+        background: rgba(1, 75, 144, 0);
+        /* Ajusta el valor alpha para controlar la transparencia */
         transition: all 0.3s;
         -moz-transition: all 0.3s;
         -o-transition: all 0.3s;
         -webkit-transition: all 0.3s;
         margin-left: 1px;
     }
+
+    .navbar-default {
+        background: rgba(248, 248, 248, 0);
+        border: rgba(248, 248, 248, 0);
+        padding: 5px 5px;
+    }
+
     /* Estilos para el menú desplegable */
     .navbar-collapse {
         display: none;
         background: #022b52;
         /* Fondo del menú desplegable */
-        width: 150px; /* Ajusta según sea necesario */
-        height: auto; /* Ajusta según sea necesario */
+        width: 50px;
+        /* Ajusta según sea necesario */
+        height: auto;
+        /* Ajusta según sea necesario */
+        margin-right: 100px;
+    }
+    .show{
+		margin-right:2px;
+    }
+    .css-container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-left: 2%;
+
+    }
+
+    .text-visibility {
+        display: none;
     }
 
     /* Estilos para el icono de hamburguesa */
@@ -302,11 +332,12 @@
         /* Ajusta según sea necesario */
         margin-bottom: 5px;
         /* Espaciado entre los iconos, ajusta según sea necesario */
-   
+
     }
 
     .navbar-collapse li a:before {
-        font-size: 16px; /* Tamaño de fuente específico para los iconos */
+        font-size: 16px;
+        /* Tamaño de fuente específico para los iconos */
     }
 
     .navbar-collapse li:nth-child(1) a:before {
@@ -315,13 +346,11 @@
     }
 
     .navbar-collapse li:nth-child(2) a:before {
-        content: "\f019";
-        /* Icono diferente para el segundo elemento */
+        content: "\f109"
     }
 
     .navbar-collapse li:nth-child(3) a:before {
-        content: "\f0c0";
-        /* Otro icono diferente para el tercer elemento */
+        content: "\f1b3";
     }
 
     .navbar-collapse li:nth-child(4) a:before {
@@ -336,6 +365,7 @@
         display: block;
     }
 }
+
 @media all and (min-width: 100px) and (max-width: 298px) {
     /* Otros estilos existentes... */
 
@@ -344,8 +374,10 @@
         display: none;
         background: #022b52;
         /* Fondo del menú desplegable */
-        width: 150px; /* Ajusta según sea necesario */
-        height: auto; /* Ajusta según sea necesario */
+        width: 150px;
+        /* Ajusta según sea necesario */
+        height: auto;
+        /* Ajusta según sea necesario */
     }
 
     /* Estilos para el icono de hamburguesa */
@@ -373,11 +405,12 @@
         /* Ajusta según sea necesario */
         margin-bottom: 5px;
         /* Espaciado entre los iconos, ajusta según sea necesario */
-   
+
     }
 
     .navbar-collapse li a:before {
-        font-size: 16px; /* Tamaño de fuente específico para los iconos */
+        font-size: 16px;
+        /* Tamaño de fuente específico para los iconos */
     }
 
     .navbar-collapse li:nth-child(1) a:before {
