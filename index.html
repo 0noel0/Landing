@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title</title>
+  <title< /title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
@@ -65,7 +65,8 @@
               <div class="col-md-7 col-sm-12 col-xs-12">
                 <h1 style="font-family: 'Open Sans', sans-serif;">DEVELOPMENT OF EXPERIENCES</h1>
                 <h2 style="font-family: 'Open Sans', sans-serif;">¿Quiénes somos?</h2>
-                <p style="margin-right:15%; font-family: 'Raleway', sans-serif;">Somos una empresa de servicios y consultoría en TI, que busca la excelencia en el diseño, desarrollo
+                <p style="margin-right:15%; font-family: 'Raleway', sans-serif;">Somos una empresa de servicios y
+                  consultoría en TI, que busca la excelencia en el diseño, desarrollo
                   e  implementación de soluciones tecnológicas, que  se adapten a las necesidades del mercado. Brindamos
                   el talento idóneo a las empresas aplicando metodologías y ambientes laborales de calidad.</p>
               </div>
@@ -118,7 +119,8 @@
           <h2 style="font-family: 'Open Sans', sans-serif;">Servicios</h2>
           <div class="line"></div>
           <p style="margin-right: 15%; font-family: 'Raleway', sans-serif;">
-            Nuestros niveles de servicios están basados en la experiencia de nuevas y cambiantes tecnologías. Marcamos la
+            Nuestros niveles de servicios están basados en la experiencia de nuevas y cambiantes tecnologías. Marcamos
+            la
             diferencia y nos acoplamos a las necesidades y alcances de cada uno de nuestros proyectos.
           </p>
         </div>
@@ -133,13 +135,14 @@
               <div class="media-body">
                 <h5 class="media-heading">B2G</h5>
                 <p style="font-family: 'Raleway', sans-serif;">
-                  Soluciones Gobierno.<br>Transformamos procesos antiguos en nuevas tendencias, marcando etapas a mediano
+                  Soluciones Gobierno.<br>Transformamos procesos antiguos en nuevas tendencias, marcando etapas a
+                  mediano
                   plazo para modernizar el servicio a los ciudadanos.
                 </p>
               </div>
             </div>
           </div>
-  
+
           <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
             <div class="media service-box">
               <div class="pull-left">
@@ -148,13 +151,14 @@
               <div class="media-body">
                 <h5 class="media-heading">STAFF</h5>
                 <p style="font-family: 'Raleway', sans-serif;">
-                  Outsourcing.<br>Brindamos talento idóneo para el cumplimiento de objetivos de tu empresa, acompañado de
+                  Outsourcing.<br>Brindamos talento idóneo para el cumplimiento de objetivos de tu empresa, acompañado
+                  de
                   líderes de proyectos que garantizan la experiencia de nuestros servicios.
                 </p>
               </div>
             </div>
           </div>
-  
+
           <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
             <div class="media service-box">
               <div class="pull-left">
@@ -163,7 +167,8 @@
               <div class="media-body">
                 <h5 class="media-heading">B2B</h5>
                 <p style="font-family: 'Raleway', sans-serif;">
-                  Financiero.<br>Somos especialistas en el sector financiero para el desarrollo de productos. Te acompañamos
+                  Financiero.<br>Somos especialistas en el sector financiero para el desarrollo de productos. Te
+                  acompañamos
                   en todo el proceso, siguiendo las mejores prácticas y metodología de trabajo.
                 </p>
               </div>
@@ -173,7 +178,7 @@
       </div>
     </div>
   </section>
-  
+
 
   <section id="service" style="background-color: #022b52; 	height: 250px;">
     <div class="container">
@@ -181,7 +186,8 @@
         <div class="heading">
           <h2 style="color: #ffffff; font-family: 'Open Sans', sans-serif;">PROYECTOS</h2>
           <div class="line"></div>
-          <p style="color: #ffffff; margin-right:15%; font-family: 'Raleway', sans-serif">A través de nuestros servicios de consultoría ofrecemos soluciones tecnológicas
+          <p style="color: #ffffff; margin-right:15%; font-family: 'Raleway', sans-serif">A través de nuestros servicios
+            de consultoría ofrecemos soluciones tecnológicas
             enfocados en proyectos financieros, de acuerdo a las necesidades de cada cliente, brindando orden,
             optimización y eficiencia de recursos.</p>
         </div>
@@ -269,7 +275,7 @@
             </div>
 
             <div class="form-group">
-              <textarea name="message" id="message" class="form-control" rows="4" placeholder="Mensaje"
+              <textarea name="message" id="message" class="form-control" maxlength="250" rows="4" placeholder="Mensaje"
                 required="required"></textarea>
             </div>
             <a class="btn-send col-md-12 col-sm-12 col-xs-12" onclick="submitForm()">Enviar</a>
@@ -310,9 +316,43 @@
     form.reset();
   });
 
+
+
   function submitForm() {
     var form = document.getElementById('main-contact-form');
+
+    var nameValue = form.querySelector('input[name="name"]').value;
+    var emailValue = form.querySelector('input[name="email"]').value;
+
+    if (!isValidName(nameValue)) {
+      form.querySelector('input[name="name"]').value = '';
+      return;
+    }
+
+    if (!isValidEmail(emailValue)) {
+      form.querySelector('input[name="email"]').value = '';
+      return;
+    }
+
     form.submit();
+
+    form.querySelector('input[name="name"]').value = '';
+    form.querySelector('input[name="email"]').value = '';
+    form.querySelector('textarea[name="message"]').value = '';
+
   }
+
+  function isValidName(name) {
+    var nameRegex = /^[a-zA-Z\s]+$/;
+    return nameRegex.test(name);
+  }
+
+  function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+
+
 </script>
 <script type="text/javascript" src="http://stats.hosting24.com/count.php"></script>
